@@ -9,8 +9,6 @@ import {Movie} from './Movie.js'
 export const API = () => {
   let genres = [];
   let movies = [];
-
-
   const fetchGenres = (callback) =>{
 
     let url = 'https://api.themoviedb.org/3/genre/movie/list?language=en';
@@ -89,4 +87,8 @@ fetchGenres(fetchMovies);
   //   // File is not in the correct JSON format
   //   console.log('File is not in the correct JSON format.');
   // }
+
+  return 1;
 }
+
+

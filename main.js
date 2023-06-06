@@ -4,6 +4,7 @@ const fs = require("fs");
 const readline = require("readline");
 import { Movie } from "./Movie.js";
 import { API } from "./API.js";
+import { resolve } from "path";
 
 function readMovieDataFromFile(filePath) {
   try {
@@ -37,6 +38,7 @@ Select an action:
 4) Delete a Movie
 5) Search for a specific Movie
 6) Display Filtered Movie Catalog
+7) Export Movies from API (will overwrite current movies.json)
 ***************************
 What's your choice? (Enter 'exit' to exit)\n`;
 
@@ -104,6 +106,14 @@ const main = () => {
   function ask(question) {
     rl.question(question, async (answer) => {
       if (answer === "exit") {
+        fs.writeFileSync("movies.json", JSON.stringify(movies,null,1), 'utf-8', (err) => {
+          if (err) {
+            console.log("Something went wrong while writing to the file!");
+            console.log(err.message);
+          } else {
+            console.log("File has been written.");
+          }
+        });
         process.exit(1);
       }
       if (typeof (answer = parseInt(answer)) === "number") {
@@ -232,6 +242,11 @@ const main = () => {
               }
               addFilter();
             });   
+            break;
+            case 7: await new Promise((resolve)=>{
+              while(API() != 1);
+              resolve();
+            }); 
             break;
          }
       } else {
