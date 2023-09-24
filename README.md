@@ -1,24 +1,36 @@
-# To-Do List Manager Project:
+# Project: Movie Catalog CLI Application
 
-This project is a command-line to-do list manager application built with Node.js and JavaScript. The application provides a set of features to help users organize their tasks efficiently.
+## Description:
+
+The Movie Catalog CLI Application is a Node.js-based command-line tool designed for managing a movie catalog. This project incorporates various programming concepts and features to provide users with a powerful and interactive movie management experience.
 
 ## Key Features:
 
-- Adding New Tasks: Users can add new tasks to the to-do list. Each task includes a description, due date, and priority level. A Task object prototype is used to represent these properties.
+- Display Movie Catalog:
+The application reads movie data from a JSON file and presents users with a comprehensive list of movies in their catalog. Users can quickly review their collection.
 
-- Marking Tasks as Completed: Users can mark tasks as completed. The application uses the filter() method to find the task in the array and update its status.
+- Add New Movie:
+Users have the option to add new movies to their catalog by providing essential details such as title, director, release year, and genre. The application automatically stores this data in the JSON file, ensuring their catalog is up to date.
 
-- Deleting Tasks: Users can delete tasks from the to-do list. The splice() method is used to remove tasks from the array.
+- Update Movie Details:
+Movie enthusiasts can edit specific details of movies in their collection. By selecting a movie from the catalog, they can modify properties like title, director, release year, and genre.
 
-- Filtering Tasks: Users can filter the list to view either completed or incomplete tasks, making it easier to focus on specific tasks.
+- Delete Movie:
+The application empowers users to remove any movie from their catalog effortlessly. A simple selection and deletion process help users keep their collection tidy and organized.
 
-- Sorting Tasks: Tasks can be sorted based on due date or priority, allowing users to organize their to-do list in a way that suits their needs.
+- Search and Filter:
+Movie discovery becomes easier with the built-in search functionality. Users can look for movies based on title, director, or genre.
+Additionally, users can filter their catalog using criteria like genre or release year to find movies that match their preferences.
 
-- User Interaction: The application uses stdin to read input from the user. Users are presented with a list of actions they can perform, such as adding tasks, marking them as completed, deleting tasks, and more.
+- Fetch Movie Data:
+To enrich their catalog, users can fetch additional movie information from external sources using the Fetch API. The application can communicate with movie databases like OMDB API, expanding their collection with up-to-date data.
 
-The project leverages JavaScript's array methods like push(), filter(), and sort() 
-to manage the list of tasks efficiently. When a user adds a new task, a new Task object is 
-created and added to the array. The application provides a user-friendly interface through the 
-command line, making it easy for users to interact with their to-do list.
+- Modular Structure:
+The project is structured with a modular design, dividing responsibilities into separate modules. This enhances code organization and makes it easier to maintain.
+Modules for file handling, movie management, API requests, and user interaction ensure clean separation of concerns.
 
-Overall, this project helps users stay organized by providing a flexible and feature-rich to-do list management tool.
+- Async Programming:
+Asynchronous programming techniques, such as Promises or async/await, are employed to handle file
+read/write operations and API requests efficiently. This ensures a smooth and responsive user experience while preventing any blocking of the main program flow.
+
+The Movie Catalog CLI Application offers movie enthusiasts a powerful yet user-friendly way to manage their movie collections. Whether it's adding new releases, updating movie details, or exploring new titles, this application simplifies the process while keeping movie data organized and up to date. Its modular structure and asynchronous programming techniques contribute to a seamless user experience.
